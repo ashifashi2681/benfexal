@@ -1,26 +1,176 @@
 @import "tailwindcss";
 
+@theme {
+  /*  Brand Colors */
+
+  --color-brand: #0074ff;
+  --color-brand-hover: #005fe0;
+  --color-brand-light: #eaf4ff;
+
+  --color-brand-blue: #00a3ff;
+  --color-brand-blue-dark: #0066e6;
+
+  --color-brand-gold: #d99a32;
+  --color-brand-gold-light: #fff5d9;
+  --color-brand-gold-dark: #b77c1f;
+
+
+  /*  Background */
+
+  --color-background: #ffffff;
+  --color-background-muted: #f7f9fc;
+  --color-background-subtle: #f1f5f9;
+
+
+  /* Surface */
+
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8fafc;
+  --color-surface-elevated: #f1f5f9;
+
+
+  /* Foreground / Typography*/
+
+  --color-foreground: #181818;
+  --color-foreground-secondary: #343a46;
+  --color-foreground-muted: #5f6673;
+  --color-foreground-subtle: #8a919d;
+
+
+  /*  Border */
+
+  --color-border: #e2e8f0;
+  --color-border-light: #edf1f5;
+  --color-border-dark: #cbd5e1;
+
+
+  /* Status*/
+
+  --color-success: #16a34a;
+  --color-success-light: #ecfdf3;
+
+  --color-warning: #d99a32;
+  --color-warning-light: #fff8e7;
+
+  --color-error: #dc2626;
+  --color-error-light: #fef2f2;
+
+
+  /*  Radius */
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+
+
+  /* Shadows */
+
+  --shadow-card:
+    0 1px 3px rgb(15 23 42 / 0.06),
+    0 8px 24px rgb(15 23 42 / 0.04);
+
+  --shadow-card-hover:
+    0 8px 30px rgb(15 23 42 / 0.08),
+    0 20px 50px rgb(15 23 42 / 0.06);
+}
+
+
+/* Base Styles*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --header-height: 76px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Global Typography*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-foreground);
+  text-wrap: balance;
+}
+
+p {
+  color: var(--color-foreground-muted);
+  text-wrap: pretty;
+}
+
+@theme {
+	--text-*: initial;
+	--text-xxs: clamp(9.26px, 0.03vi + 9.16px, 9.63px);
+	--text-xs: clamp(11.11px, 0.09vi + 10.81px, 12.16px);
+	--text-sm: clamp(13.33px, 0.17vi + 12.8px, 15.2px);
+	--text-base: clamp(16px, 0.27vi + 15.14px, 19px);
+	--text-md: clamp(19.2px, 0.41vi + 17.9px, 23.75px);
+	--text-lg: clamp(23.04px, 0.59vi + 21.14px, 29.69px);
+	--text-xl: clamp(27.65px, 0.84vi + 24.94px, 37.11px);
+	--text-xxl: clamp(33.18px, 1.18vi + 29.4px, 46.39px);
+	--text-xxxl: clamp(39.81px, 1.62vi + 34.62px, 57.98px);
+	--text-xxxxl: clamp(47.77px, 2.19vi + 40.77px, 72.48px);
+	--text-xxxxxl: clamp(57.33px, 2.91vi + 48.03px, 90.6px);
+}
+
+
+
+/* Scrollbar */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/*  Reduced Motion*/
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.section-stack {
+  @apply sticky top-0 z-10 shadow-[0_-5px_50px_-3px_rgba(0,0,0,0.5)]
 }
