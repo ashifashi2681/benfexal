@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Container from "../ui/Container";
 
 const brandName = "Benfexal";
@@ -68,7 +69,7 @@ function Footer() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Brand */}
           <div className="flex flex-col items-start gap-6 lg:col-span-5 lg:pr-12">
-            <a
+            <Link
               href="/"
               aria-label={`${brandName} — home`}
               className="inline-flex items-center gap-3"
@@ -79,7 +80,7 @@ function Footer() {
               <span className="text-xl font-semibold tracking-tight text-white">
                 {brandName}
               </span>
-            </a>
+            </Link>
 
             <p className="max-w-sm text-sm leading-relaxed text-white/60">
               {aboutText}
