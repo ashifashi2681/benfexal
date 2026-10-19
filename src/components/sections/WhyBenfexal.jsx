@@ -115,9 +115,9 @@ function WhyBenfexal() {
 			</div>
 
 			{/* ERP ecosystem centerpiece with orbiting proof points */}
-			<div className="relative mt-14 lg:min-h-[54rem]">
+			<div className="relative mt-14 lg:min-h-216">
 				<div
-					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-border lg:block"
+					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-136 w-136 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-border lg:block"
 					aria-hidden="true"
 				/>
 				<div
@@ -125,11 +125,11 @@ function WhyBenfexal() {
 					aria-hidden="true"
 				/>
 				<div
-					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[38rem] w-px -translate-x-1/2 -translate-y-1/2 bg-border-light lg:block "
+					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-152 w-px -translate-x-1/2 -translate-y-1/2 bg-border-light lg:block "
 					aria-hidden="true"
 				/>
 
-				<div className="relative z-20 mx-auto w-full max-w-[28rem] lg:absolute lg:left-1/2 lg:top-1/2 lg:mt-0 lg:-translate-x-1/2 lg:-translate-y-1/2 ">
+				<div className="relative z-20 mx-auto w-full max-w-md lg:absolute lg:left-1/2 lg:top-1/2 lg:mt-0 lg:-translate-x-1/2 lg:-translate-y-1/2 ">
 					<div className="relative border border-border bg-background px-6 py-8 text-center shadow-card sm:px-8 sm:py-10 ">
 						<div
 							className="absolute -inset-4 border border-brand/10"
@@ -186,34 +186,32 @@ function WhyBenfexal() {
 							]
 								.filter(Boolean)
 								.join(" ")}>
-							
-								<div className="mb-5 flex items-center justify-between gap-4 border-b border-border pb-4">
-									<span className="font-mono text-sm font-semibold text-brand">
-										{point.number}
-									</span>
-									<span
-										className="h-2.5 w-2.5 rounded-full bg-brand-gold transition duration-300 group-hover:scale-150"
-										aria-hidden="true"
-									/>
-								</div>
-								<h3 className="text-lg font-semibold leading-tight text-foreground">
-									{point.title}
-								</h3>
-								<p className="mt-3 text-sm leading-relaxed text-foreground-muted">
-									{point.description}
-								</p>
+							<div className="mb-5 flex items-center justify-between gap-4 border-b border-border pb-4">
+								<span className="font-mono text-sm font-semibold text-brand">
+									{point.number}
+								</span>
 								<span
-									className={[
-										"absolute hidden origin-center overflow-hidden bg-border-dark after:absolute after:inset-0 after:bg-brand after:transition after:duration-700 lg:block",
-										point.vertical
-											? "after:-translate-y-full group-hover:after:translate-y-0"
-											: "after:-translate-x-full group-hover:after:translate-x-0",
-										point.line,
-									]
-										.filter(Boolean)
-										.join(" ")}
-									aria-hidden="true"></span>
-							
+									className="h-2.5 w-2.5 rounded-full bg-brand-gold transition duration-300 group-hover:scale-150"
+									aria-hidden="true"
+								/>
+							</div>
+							<h3 className="text-lg font-semibold leading-tight text-foreground">
+								{point.title}
+							</h3>
+							<p className="mt-3 text-sm leading-relaxed text-foreground-muted">
+								{point.description}
+							</p>
+							<span
+								className={[
+									"absolute hidden origin-center overflow-hidden bg-border-dark after:absolute after:inset-0 after:bg-brand after:transition after:duration-700 lg:block",
+									point.vertical
+										? "after:-translate-y-full group-hover:after:translate-y-0"
+										: "after:-translate-x-full group-hover:after:translate-x-0",
+									point.line,
+								]
+									.filter(Boolean)
+									.join(" ")}
+								aria-hidden="true"></span>
 						</Card>
 					))}
 				</div>

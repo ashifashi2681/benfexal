@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
+import Steps from "../ui/Steps";
 
 const modules = [
 	{
@@ -166,24 +167,9 @@ function ERPModules() {
 				</div>
 			</div>
 
-			{/* <div className="mt-10 border border-border bg-surface">
-				<div className="flex flex-col divide-y divide-border sm:flex-row sm:divide-x sm:divide-y-0">
-					{flow.map((step, index) => (
-						<div
-							key={step}
-							className="flex flex-1 items-center justify-between gap-4 px-5 py-4">
-							<span className="text-sm font-semibold text-foreground">
-								{step}
-							</span>
-							{index < flow.length - 1 && (
-								<span className="text-brand" aria-hidden="true">
-									&rarr;
-								</span>
-							)}
-						</div>
-					))}
-				</div>
-			</div> */}
+			<div className="mt-16 flex justify-center">
+				<Steps arr={flow} />
+			</div>
 		</Container>
 	);
 }

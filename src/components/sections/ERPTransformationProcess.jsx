@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
+import Steps from "../ui/Steps";
 
 const stages = [
 	{
@@ -79,21 +80,6 @@ const transitions = [
 	"Growth",
 ];
 
-const flow = [
-	"Analyze",
-	"Design",
-	"Configure",
-	"Develop",
-	"Migrate",
-	"Train",
-	"Launch",
-	"Optimize",
-];
-
-/* Serpentine journey line (viewBox 1440x920): stages 01-04 run left to right
-   along the top, the line turns down at the right edge, stages 05-08 run
-   right to left along the bottom, and stage 08 loops back toward stage 01.
-   Node anchors use the same coordinate space as the percentage positions. */
 const journeyPath =
 	"M 70 150 H 1230 C 1330 150 1410 210 1410 320 L 1410 480 C 1410 590 1330 650 1230 650 L 209 650";
 const loopBackPath = "M 209 650 C 130 650 40 628 40 540 L 40 300";
@@ -110,7 +96,7 @@ const directionChevrons = [
 function ERPTransformationProcess() {
 	return (
 		<Container
-			className="stack-wrapper overflow-hidden border-y border-border-light bg-background"
+			className="stack-wrapper overflow-hidden border-y border-border-light bg-background bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_26rem] lg:gap-16">
 				<SectionHeading
@@ -126,15 +112,15 @@ function ERPTransformationProcess() {
 						Implementation methodology
 					</p>
 					<p className="mt-5 text-base leading-relaxed text-foreground-muted">
-						Every successful ERP project starts with understanding the
-						business. Benfexal follows a structured{" "}
+						Every successful ERP project starts with understanding
+						the business. Benfexal follows a structured{" "}
 						<strong className="font-semibold text-foreground">
 							Odoo ERP implementation process
 						</strong>{" "}
 						that connects{" "}
 						<strong className="font-semibold text-foreground">
-							business analysis, solution design, technology, data,
-							people, and ongoing support
+							business analysis, solution design, technology,
+							data, people, and ongoing support
 						</strong>
 						.
 					</p>
@@ -146,7 +132,8 @@ function ERPTransformationProcess() {
 						</strong>
 						, and create a{" "}
 						<strong className="font-semibold text-foreground">
-							scalable ERP foundation for long-term business growth
+							scalable ERP foundation for long-term business
+							growth
 						</strong>
 						.
 					</p>
@@ -157,6 +144,7 @@ function ERPTransformationProcess() {
 				className="mt-10 h-24 border border-dashed border-border bg-surface-muted sm:h-28"
 				aria-hidden="true">
 				{/* img required — premium abstract visual: fragmented workflows → connected Odoo ERP → optimized operations */}
+				image
 			</div>
 
 			{/* Mobile: vertical timeline */}
@@ -190,9 +178,9 @@ function ERPTransformationProcess() {
 			</ol>
 
 			{/* Desktop: ERP transformation journey along a serpentine path */}
-			<div className="relative mt-14 hidden lg:block lg:aspect-[1440/920] lg:min-h-[54rem] xl:min-h-[52rem]">
+			<div className="relative mt-14 hidden lg:block lg:aspect-1440/950 lg:min-h-216 xl:min-h-208">
 				<div
-					className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(180deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:56px_56px]"
+					className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(180deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-size-[56px_56px] "
 					aria-hidden="true"
 				/>
 
@@ -220,7 +208,10 @@ function ERPTransformationProcess() {
 							refY="7"
 							orient="auto"
 							markerUnits="userSpaceOnUse">
-							<path d="M 3 1.5 L 11 7 L 3 12.5 Z" fill="#d99a32" />
+							<path
+								d="M 3 1.5 L 11 7 L 3 12.5 Z"
+								fill="#d99a32"
+							/>
 						</marker>
 					</defs>
 
@@ -274,20 +265,8 @@ function ERPTransformationProcess() {
 						/>
 					))}
 				</svg>
-
-				<div className="pointer-events-none absolute left-1/2 top-[52%] flex -translate-x-1/2 -translate-y-1/2 items-center gap-2.5 border border-border bg-surface/85 px-5 py-3 shadow-card backdrop-blur">
-					{transitions.map((label, index) => (
-						<React.Fragment key={label}>
-							{index > 0 && (
-								<span className="text-brand-gold" aria-hidden="true">
-									&rarr;
-								</span>
-							)}
-							<span className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground-secondary">
-								{label}
-							</span>
-						</React.Fragment>
-					))}
+				<div className="absolute left-1/2 top-[54%] -translate-x-1/2 -translate-y-1/2 ">
+					<Steps arr={transitions} />
 				</div>
 
 				<ol className="relative h-full">
@@ -329,21 +308,6 @@ function ERPTransformationProcess() {
 						</li>
 					))}
 				</ol>
-			</div>
-
-			<div className="mt-10 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 border border-border bg-surface px-5 py-4 lg:mt-12">
-				{flow.map((step, index) => (
-					<React.Fragment key={step}>
-						{index > 0 && (
-							<span className="text-brand-gold" aria-hidden="true">
-								&rarr;
-							</span>
-						)}
-						<span className="text-sm font-semibold text-foreground">
-							{step}
-						</span>
-					</React.Fragment>
-				))}
 			</div>
 
 			<p className="mt-5 max-w-2xl text-sm font-medium text-foreground-muted">

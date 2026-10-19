@@ -54,9 +54,9 @@ export default function Home() {
 			<WhyBenfexal />
 			<IndustriesWeServe />
 			<ERPModules />
-			{/* <ERPTransformationProcess />
+			<ERPTransformationProcess />
 			<ImplementationPhilosophy />
-			<Contact /> */}
+			{/* <Contact /> */}
 			<StackScroll />
 		</>
 	);

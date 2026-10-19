@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
+import Steps from "../ui/Steps";
 
 const metrics = [
 	{
@@ -22,7 +23,7 @@ const processSteps = ["Business First", "Process", "Technology", "Growth"];
 function AboutUs() {
 	return (
 		<Container
-			className="stack-wrapper overflow-hidden border-y border-border-light bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center stack-wrapper"
+			className="stack-wrapper overflow-hidden border-y border-border-light bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_24rem] lg:gap-16">
 				<div className="flex flex-col gap-8">
@@ -107,24 +108,10 @@ function AboutUs() {
 				</aside>
 			</div>
 
-			{/* <div className="mt-12 border border-border bg-surface">
-				<div className="grid divide-y divide-border sm:grid-cols-4 sm:divide-x sm:divide-y-0">
-					{processSteps.map((step, index) => (
-						<div
-							key={step}
-							className="flex items-center justify-between gap-4 px-5 py-4">
-							<span className="text-sm font-semibold text-foreground">
-								{step}
-							</span>
-							{index < processSteps.length - 1 && (
-								<span className="text-brand" aria-hidden="true">
-									&rarr;
-								</span>
-							)}
-						</div>
-					))}
-				</div>
-			</div> */}
+			<div className="mt-16 flex justify-center">
+				<Steps arr={processSteps} />
+			</div>
+		
 		</Container>
 	);
 }

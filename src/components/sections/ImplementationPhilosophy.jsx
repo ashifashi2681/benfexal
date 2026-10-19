@@ -68,7 +68,7 @@ function ImplementationPhilosophy() {
 	return (
 		<Container
 			spacing="lg"
-			className="stack-wrapper overflow-hidden border-y border-border-light bg-background-muted"
+			className="stack-wrapper overflow-hidden border-y border-border-light bg-background-muted bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div className="mx-auto max-w-5xl text-center">
 				<SectionHeading
@@ -94,16 +94,14 @@ function ImplementationPhilosophy() {
 						standard Odoo functionality
 					</strong>{" "}
 					wherever it can effectively support your business processes.
-					Custom development is introduced only when a genuine business
-					requirement cannot be addressed effectively through standard
-					capabilities.
+					Custom development is introduced only when a genuine
+					business requirement cannot be addressed effectively through
+					standard capabilities.
 				</p>
 			</div>
 
 			{/* Value spectrum — five typographic labels on an animated balance line */}
-			<div
-				ref={spectrumRef}
-				className="mt-24 hidden lg:block sm:mt-32">
+			<div ref={spectrumRef} className="mt-24 hidden lg:block sm:mt-32">
 				<div
 					className={`flex items-center justify-between gap-4 transition-opacity duration-700 ${
 						isVisible ? "opacity-100" : "opacity-0"
@@ -118,11 +116,11 @@ function ImplementationPhilosophy() {
 
 				<div className="relative mt-8">
 					<div
-						className="absolute left-0 right-0 top-[7px] h-px bg-border"
+						className="absolute left-0 right-0 top-1.75 h-px bg-border"
 						aria-hidden="true"
 					/>
 					<div
-						className={`absolute left-0 right-0 top-[7px] h-[2px] origin-left -translate-y-1/2 bg-linear-to-r from-brand via-brand-blue to-brand-gold transition-transform duration-[1400ms] ease-out ${
+						className={`absolute left-0 right-0 top-1.75 h-0.5 origin-left -translate-y-1/2 bg-linear-to-r from-brand via-brand-blue to-brand-gold transition-transform duration-1400 ease-out ${
 							isVisible ? "scale-x-100" : "scale-x-0"
 						}`}
 						aria-hidden="true"
@@ -209,26 +207,21 @@ function ImplementationPhilosophy() {
 				aria-hidden="true">
 				<div className="h-44 border border-dashed border-border bg-surface-muted sm:h-52">
 					{/* img required — ERP architecture blueprint: standard Odoo foundation transitioning into a few highlighted custom components */}
+					image
 				</div>
 			</div>
 
 			{/* Our principle */}
 			<div className="mx-auto mt-24 max-w-4xl text-center sm:mt-28">
-				<div className="flex items-center justify-center gap-4">
-					<span className="h-px w-10 bg-border-dark" aria-hidden="true" />
-					<p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground-subtle">
-						Our Principle
-					</p>
-					<span className="h-px w-10 bg-border-dark" aria-hidden="true" />
-				</div>
-
-				<h3 className="mt-10 text-xxl font-semibold leading-snug tracking-tight text-foreground sm:text-xxxl">
-					Standardize where it makes sense.
-					<br />
-					<span className="font-mono text-brand-gold">
-						Customize where it creates real value.
-					</span>
-				</h3>
+				<SectionHeading
+				as="h4"
+					eyebrow={"Our Principle"}
+					align="center"
+					title={
+						"Standardize where it makes sense. Customize where it creates real value."
+					}
+					highlight={"Customize where it creates real value."}
+				/>
 
 				<p className="mx-auto mt-10 max-w-2xl text-base leading-relaxed text-foreground-muted">
 					The goal is not to customize everything. It is to build the{" "}
