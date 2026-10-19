@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
+import Card from "../ui/Card";
 
 const proofPoints = [
 	{
@@ -47,7 +48,7 @@ const proofPoints = [
 		description:
 			"Our relationship continues beyond implementation. Dedicated Odoo support and Annual Maintenance Contract (AMC) services help maintain system performance, resolve issues, implement enhancements, and support continuous improvement.",
 		position:
-			"lg:bottom-0 lg:left-1/2 lg:max-w-[21rem] lg:-translate-x-1/2 lg:text-center",
+			"lg:-bottom-56 lg:left-1/2 lg:max-w-[21rem] lg:-translate-x-1/2 lg:text-center",
 		line: "lg:bottom-full lg:left-1/2 lg:h-20 lg:w-px lg:-translate-x-1/2",
 		vertical: true,
 	},
@@ -88,7 +89,7 @@ function WhyBenfexal() {
 	return (
 		<Container
 			ref={sectionRef}
-			className="stack-wrapper overflow-hidden border-y border-border-light bg-surface"
+			className="stack-wrapper overflow-hidden border-y border-border-light bg-surface-elevated bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div className="mx-auto max-w-4xl text-center">
 				<SectionHeading
@@ -120,16 +121,16 @@ function WhyBenfexal() {
 					aria-hidden="true"
 				/>
 				<div
-					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-px w-full max-w-5xl -translate-x-1/2 bg-border-light lg:block"
+					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-px w-full max-w-5xl -translate-x-1/2 bg-border-light lg:block "
 					aria-hidden="true"
 				/>
 				<div
-					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[38rem] w-px -translate-x-1/2 -translate-y-1/2 bg-border-light lg:block"
+					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[38rem] w-px -translate-x-1/2 -translate-y-1/2 bg-border-light lg:block "
 					aria-hidden="true"
 				/>
 
-				<div className="relative z-20 mx-auto w-full max-w-[28rem] lg:absolute lg:left-1/2 lg:top-1/2 lg:mt-0 lg:-translate-x-1/2 lg:-translate-y-1/2">
-					<div className="relative border border-border bg-background px-6 py-8 text-center shadow-card sm:px-8 sm:py-10">
+				<div className="relative z-20 mx-auto w-full max-w-[28rem] lg:absolute lg:left-1/2 lg:top-1/2 lg:mt-0 lg:-translate-x-1/2 lg:-translate-y-1/2 ">
+					<div className="relative border border-border bg-background px-6 py-8 text-center shadow-card sm:px-8 sm:py-10 ">
 						<div
 							className="absolute -inset-4 border border-brand/10"
 							aria-hidden="true"
@@ -152,6 +153,7 @@ function WhyBenfexal() {
 							className="mt-6 h-20 border border-dashed border-border bg-surface-muted"
 							aria-hidden="true">
 							{/* img required — premium abstract ERP ecosystem visual: interconnected business functions (finance, sales, inventory, manufacturing, HR, CRM) */}
+							image
 						</div>
 
 						<div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3">
@@ -168,15 +170,15 @@ function WhyBenfexal() {
 
 				<div className="mt-10 grid gap-4 lg:mt-0 lg:block">
 					{proofPoints.map((point, index) => (
-						<article
+						<Card
 							key={point.number}
-							style={{
-								transitionDelay: isVisible
-									? `${index * 120}ms`
-									: "0ms",
-							}}
+							// style={{
+							// 	transitionDelay: isVisible
+							// 		? `${index * 120}ms`
+							// 		: "0ms",
+							// }}
 							className={[
-								"group relative border border-border bg-background/95 p-5 shadow-card transition duration-500 hover:-translate-y-1 hover:border-brand/30 hover:shadow-card-hover lg:absolute",
+								"group relative shadow-card lg:absolute",
 								isVisible
 									? "translate-y-0 opacity-100"
 									: "translate-y-6 opacity-0",
@@ -184,39 +186,40 @@ function WhyBenfexal() {
 							]
 								.filter(Boolean)
 								.join(" ")}>
-							<div className="mb-5 flex items-center justify-between gap-4 border-b border-border pb-4">
-								<span className="font-mono text-sm font-semibold text-brand">
-									{point.number}
-								</span>
+							
+								<div className="mb-5 flex items-center justify-between gap-4 border-b border-border pb-4">
+									<span className="font-mono text-sm font-semibold text-brand">
+										{point.number}
+									</span>
+									<span
+										className="h-2.5 w-2.5 rounded-full bg-brand-gold transition duration-300 group-hover:scale-150"
+										aria-hidden="true"
+									/>
+								</div>
+								<h3 className="text-lg font-semibold leading-tight text-foreground">
+									{point.title}
+								</h3>
+								<p className="mt-3 text-sm leading-relaxed text-foreground-muted">
+									{point.description}
+								</p>
 								<span
-									className="h-2.5 w-2.5 rounded-full bg-brand-gold transition duration-300 group-hover:scale-150"
-									aria-hidden="true"
-								/>
-							</div>
-							<h3 className="text-lg font-semibold leading-tight text-foreground">
-								{point.title}
-							</h3>
-							<p className="mt-3 text-sm leading-relaxed text-foreground-muted">
-								{point.description}
-							</p>
-							<span
-								className={[
-									"absolute hidden origin-center overflow-hidden bg-border-dark after:absolute after:inset-0 after:bg-brand after:transition after:duration-700 lg:block",
-									point.vertical
-										? "after:-translate-y-full group-hover:after:translate-y-0"
-										: "after:-translate-x-full group-hover:after:translate-x-0",
-									point.line,
-								]
-									.filter(Boolean)
-									.join(" ")}
-								aria-hidden="true"
-							/>
-						</article>
+									className={[
+										"absolute hidden origin-center overflow-hidden bg-border-dark after:absolute after:inset-0 after:bg-brand after:transition after:duration-700 lg:block",
+										point.vertical
+											? "after:-translate-y-full group-hover:after:translate-y-0"
+											: "after:-translate-x-full group-hover:after:translate-x-0",
+										point.line,
+									]
+										.filter(Boolean)
+										.join(" ")}
+									aria-hidden="true"></span>
+							
+						</Card>
 					))}
 				</div>
 			</div>
 
-			<div className="mt-8 border border-border bg-foreground px-5 py-5 text-center sm:px-8">
+			<div className="mt-66 border border-border bg-foreground px-5 py-5 text-center sm:px-8">
 				<p className="text-lg font-semibold text-white">
 					Expertise. Alignment. Scalability. Support.
 				</p>

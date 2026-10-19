@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
 import Button from "../ui/Button";
+import Card from "../ui/Card";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { TbSettingsStar } from "react-icons/tb";
 import { FaHeadSideVirus } from "react-icons/fa";
@@ -160,14 +161,9 @@ function OurServices() {
 
 			<div className="relative mt-12 grid gap-4 lg:grid-cols-12">
 				{services.map((service) => (
-					<article
+					<Card
 						key={service.number}
-						className={[
-							"group min-h-80 overflow-hidden rounded-md border border-border bg-surface p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-brand/30 hover:bg-white hover:shadow-card-hover",
-							service.className,
-						]
-							.filter(Boolean)
-							.join(" ")}>
+						className={service.className}>
 						<div className="flex h-full flex-col justify-between gap-8">
 							<div className="flex items-start justify-between gap-6">
 								<div>
@@ -202,28 +198,10 @@ function OurServices() {
 								</div>
 							</div>
 						</div>
-					</article>
+					</Card>
 				))}
 			</div>
 
-			{/* <div className="mt-6 border border-border bg-surface">
-				<div className="flex flex-col divide-y divide-border sm:flex-row sm:divide-x sm:divide-y-0">
-					{lifecycle.map((step, index) => (
-						<div
-							key={step}
-							className="flex flex-1 items-center justify-between gap-4 px-5 py-4">
-							<span className="text-sm font-semibold text-foreground">
-								{step}
-							</span>
-							{index < lifecycle.length - 1 && (
-								<span className="text-brand" aria-hidden="true">
-									&rarr;
-								</span>
-							)}
-						</div>
-					))}
-				</div>
-			</div> */}
 
 			<p className="mt-5 max-w-2xl text-sm font-medium text-foreground-muted">
 				One Odoo partner for your complete ERP lifecycle.

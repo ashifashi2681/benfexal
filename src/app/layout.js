@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SmoothScrollLayout from "@/components/ui/SmoothScrollLayout";
 
 const siteUrl =
 	process.env.NEXT_PUBLIC_SITE_URL || "https://www.benfexal.com";
@@ -86,6 +87,7 @@ export default function RootLayout({ children }) {
 				{children}
 				<Footer />
 			</body>
+			<SmoothScrollLayout />
 		</html>
 	);
 }

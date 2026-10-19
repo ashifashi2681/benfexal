@@ -74,7 +74,7 @@ const flow = ["Sales", "Finance", "Operations", "People", "Performance"];
 function ERPModules() {
 	return (
 		<Container
-			className="stack-wrapper overflow-hidden border-y border-border-light bg-background-muted"
+			className="stack-wrapper overflow-hidden border-y border-border-light bg-background-muted bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div className="mx-auto max-w-4xl text-center">
 				<SectionHeading
@@ -89,13 +89,13 @@ function ERPModules() {
 				/>
 			</div>
 
-			<div className="relative mt-12 lg:min-h-[48rem]">
+			<div className="relative mt-12 lg:min-h-192">
 				<div
-					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-border lg:block"
+					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-120 w-120 -translate-x-1/2 -translate-y-1/2 rounded-full border border-border lg:block"
 					aria-hidden="true"
 				/>
 				<div
-					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[40rem] w-[40rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-border-light lg:block"
+					className="pointer-events-none absolute left-1/2 top-1/2 hidden h-160 w-160 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-border-light lg:block"
 					aria-hidden="true"
 				/>
 
@@ -104,13 +104,13 @@ function ERPModules() {
 						<article
 							key={module.name}
 							className={[
-								"group relative z-10 border border-border bg-surface p-5 shadow-card transition duration-300 hover:z-30 hover:border-brand/30 hover:shadow-card-hover lg:absolute lg:w-64",
+								"group relative z-10 border border-border bg-surface p-5 shadow-card transition duration-300 hover:z-30 hover:border-brand/30 hover:shadow-card-hover lg:absolute lg:w-64 rounded-md",
 								module.position,
 							]
 								.filter(Boolean)
 								.join(" ")}>
-							<div className="flex items-start justify-between gap-4">
-								<div>
+							<div className="relative">
+								<div className="">
 									<p className="font-mono text-sm font-semibold text-brand">
 										{String(index + 1).padStart(2, "0")}
 									</p>
@@ -118,7 +118,7 @@ function ERPModules() {
 										{module.name}
 									</h3>
 								</div>
-								<span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-surface-muted text-xs font-semibold text-brand">
+								<span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-surface-muted text-xs font-semibold text-brand absolute top-0 right-0">
 									{module.shortName.slice(0, 2)}
 								</span>
 							</div>
@@ -129,7 +129,7 @@ function ERPModules() {
 
 							<span
 								className={[
-									"absolute hidden origin-center overflow-hidden bg-border-dark after:absolute after:inset-0 after:-translate-x-full after:bg-brand after:transition after:duration-700 group-hover:after:translate-x-0 lg:block",
+									"absolute hidden origin-center overflow-hidden bg-border-dark after:absolute after:inset-0 after:-translate-x-full after:bg-brand after:transition after:duration-700 group-hover:after:translate-x-0 lg:block ",
 									module.line,
 								]
 									.filter(Boolean)
@@ -166,7 +166,7 @@ function ERPModules() {
 				</div>
 			</div>
 
-			<div className="mt-10 border border-border bg-surface">
+			{/* <div className="mt-10 border border-border bg-surface">
 				<div className="flex flex-col divide-y divide-border sm:flex-row sm:divide-x sm:divide-y-0">
 					{flow.map((step, index) => (
 						<div
@@ -183,7 +183,7 @@ function ERPModules() {
 						</div>
 					))}
 				</div>
-			</div>
+			</div> */}
 		</Container>
 	);
 }

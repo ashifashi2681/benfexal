@@ -51,10 +51,10 @@ export default function Home() {
 			<Hero />
 			<AboutUs />
 			<OurServices />
-			{/* <WhyBenfexal /> */}
-			{/* <IndustriesWeServe />
+			<WhyBenfexal />
+			<IndustriesWeServe />
 			<ERPModules />
-			<ERPTransformationProcess />
+			{/* <ERPTransformationProcess />
 			<ImplementationPhilosophy />
 			<Contact /> */}
 			<StackScroll />

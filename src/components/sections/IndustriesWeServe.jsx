@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
+import { HiArrowLongRight } from "react-icons/hi2";
 
 const industries = [
 	{
@@ -108,7 +109,7 @@ function IndustriesWeServe() {
 
 	return (
 		<Container
-			className="stack-wrapper overflow-hidden border-y border-border-light bg-background"
+			className="stack-wrapper overflow-hidden border-y border-border-light bg-background bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-end lg:gap-16">
 				<SectionHeading
@@ -131,15 +132,14 @@ function IndustriesWeServe() {
 					</p>
 					<p className="mt-4 text-sm leading-relaxed text-foreground-muted">
 						From manufacturing and distribution to retail,
-						construction, healthcare, and professional services,
-						we connect core operations through a unified ERP
-						platform.
+						construction, healthcare, and professional services, we
+						connect core operations through a unified ERP platform.
 					</p>
 				</div>
 			</div>
 
 			<div className="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-8">
-				<div className="border border-border bg-surface">
+				<div className="border border-border bg-surface rounded-md overflow-hidden">
 					{industries.map((industry) => {
 						const isActive = activeIndustry.name === industry.name;
 
@@ -184,37 +184,37 @@ function IndustriesWeServe() {
 										.filter(Boolean)
 										.join(" ")}
 									aria-hidden="true">
-									&rarr;
+									<HiArrowLongRight />
 								</span>
 							</button>
 						);
 					})}
 				</div>
 
-				<div className="relative min-h-[38rem] overflow-hidden border border-border bg-foreground text-white shadow-card">
-					<div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:48px_48px]" />
+				<div className="relative min-h-152 overflow-hidden border border-border bg-foreground shadow-card rounded-md">
+					<div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-size-[48px_48px] " />
 
-					<div className="relative grid min-h-[38rem] content-between gap-8 p-6 sm:p-8">
+					<div className="relative grid min-h-152 content-between gap-8 p-6 sm:p-8">
 						<div className="grid gap-6 lg:grid-cols-[1fr_13rem]">
 							<div>
-								<p className="font-mono text-sm font-semibold text-brand-gold">
+								<p className="font-mono text-sm font-semibold text-brand-gold!">
 									{activeIndustry.number}
 								</p>
-								<h3 className="mt-4 text-xxl font-semibold leading-tight text-white">
+								<h3 className="mt-4 text-xxl font-semibold leading-tight text-surface-elevated!">
 									{activeIndustry.name}
 								</h3>
-								<p className="mt-5 max-w-2xl text-base leading-relaxed text-white/72">
+								<p className="mt-5 max-w-2xl text-base leading-relaxed text-white/72!">
 									{activeIndustry.description}
 								</p>
 							</div>
 
-							<div className="min-h-44 border border-dashed border-white/25 bg-white/5">
-								{/* img required */}
+							<div className="min-h-44 border border-dashed border-white/25 bg-white/5 text-white">
+								{/* img required */} image
 							</div>
 						</div>
 
 						<div>
-							<p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+							<p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45!">
 								ERP capabilities
 							</p>
 
@@ -239,7 +239,7 @@ function IndustriesWeServe() {
 
 						<div className="border-t border-white/15 pt-5">
 							<div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-								<p className="max-w-xl text-sm font-medium text-white/70">
+								<p className="max-w-xl text-sm font-medium text-white/70!">
 									One ERP platform. Multiple industries.
 									Business-specific workflows.
 								</p>
