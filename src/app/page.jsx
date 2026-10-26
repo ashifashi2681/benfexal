@@ -56,7 +56,7 @@ export default function Home() {
 			<ERPModules />
 			<ERPTransformationProcess />
 			<ImplementationPhilosophy />
-			{/* <Contact /> */}
+			<Contact />
 			<StackScroll />
 		</>
 	);

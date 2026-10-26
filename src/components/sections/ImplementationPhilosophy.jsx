@@ -1,6 +1,5 @@
-"use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
 
@@ -43,28 +42,28 @@ const values = [
 ];
 
 function ImplementationPhilosophy() {
-	const spectrumRef = useRef(null);
-	const [isVisible, setIsVisible] = useState(false);
+	// const spectrumRef = useRef(null);
+	// const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		const node = spectrumRef.current;
-		if (!node) return;
+	// useEffect(() => {
+	// 	const node = spectrumRef.current;
+	// 	if (!node) return;
 
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) {
-					setIsVisible(true);
-					observer.unobserve(entry.target);
-				}
-			},
-			{ threshold: 0.3 }
-		);
+	// 	const observer = new IntersectionObserver(
+	// 		([entry]) => {
+	// 			if (entry.isIntersecting) {
+	// 				setIsVisible(true);
+	// 				observer.unobserve(entry.target);
+	// 			}
+	// 		},
+	// 		{ threshold: 0.3 }
+	// 	);
 
-		observer.observe(node);
+	// 	observer.observe(node);
 
-		return () => observer.disconnect();
-	}, []);
-
+	// 	return () => observer.disconnect();
+	// }, []);
+	const isVisible = true;
 	return (
 		<Container
 			spacing="lg"
@@ -101,7 +100,9 @@ function ImplementationPhilosophy() {
 			</div>
 
 			{/* Value spectrum — five typographic labels on an animated balance line */}
-			<div ref={spectrumRef} className="mt-24 hidden lg:block sm:mt-32">
+			<div
+				// ref={spectrumRef}
+				className="mt-24 hidden lg:block sm:mt-32">
 				<div
 					className={`flex items-center justify-between gap-4 transition-opacity duration-700 ${
 						isVisible ? "opacity-100" : "opacity-0"
@@ -203,18 +204,24 @@ function ImplementationPhilosophy() {
 			</div>
 
 			<div
-				className="mx-auto mt-24 max-w-5xl sm:mt-28"
-				aria-hidden="true">
-				<div className="h-44 border border-dashed border-border bg-surface-muted sm:h-52">
+				className="mx-auto mt-24 max-w-5xl sm:mt-28 rounded-md overflow-hidden shadow">
+				<div className="border border-dashed border-border bg-surface-muted">
 					{/* img required — ERP architecture blueprint: standard Odoo foundation transitioning into a few highlighted custom components */}
-					image
+					<Image
+						src="/assets/img.png"
+						alt="Odoo ERP architecture showing a standard foundation with purposeful custom components"
+						width={750}
+						height={200}
+						sizes="(max-width: 1024px) calc(100vw - 2rem), 1024px"
+						className="block h-auto w-full"
+					/>
 				</div>
 			</div>
 
 			{/* Our principle */}
 			<div className="mx-auto mt-24 max-w-4xl text-center sm:mt-28">
 				<SectionHeading
-				as="h4"
+					as="h4"
 					eyebrow={"Our Principle"}
 					align="center"
 					title={

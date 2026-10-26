@@ -1,6 +1,3 @@
-"use client";
-
-import React, { useEffect, useRef, useState } from "react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
 import Card from "../ui/Card";
@@ -64,31 +61,31 @@ const ecosystemNodes = [
 ];
 
 function WhyBenfexal() {
-	const sectionRef = useRef(null);
-	const [isVisible, setIsVisible] = useState(false);
+	// const sectionRef = useRef(null);
+	// const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		const section = sectionRef.current;
-		if (!section) return;
+	// useEffect(() => {
+	// 	const section = sectionRef.current;
+	// 	if (!section) return;
 
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) {
-					setIsVisible(true);
-					observer.unobserve(entry.target);
-				}
-			},
-			{ threshold: 0.22 }
-		);
+	// 	const observer = new IntersectionObserver(
+	// 		([entry]) => {
+	// 			if (entry.isIntersecting) {
+	// 				setIsVisible(true);
+	// 				observer.unobserve(entry.target);
+	// 			}
+	// 		},
+	// 		{ threshold: 0.22 }
+	// 	);
 
-		observer.observe(section);
+	// 	observer.observe(section);
 
-		return () => observer.disconnect();
-	}, []);
-
+	// 	return () => observer.disconnect();
+	// }, []);
+	const isVisible = true;
 	return (
 		<Container
-			ref={sectionRef}
+			// ref={sectionRef}
 			className="stack-wrapper overflow-hidden border-y border-border-light bg-surface-elevated bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div className="mx-auto max-w-4xl text-center">

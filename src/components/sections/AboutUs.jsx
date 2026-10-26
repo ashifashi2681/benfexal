@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
 import Steps from "../ui/Steps";
+import Image from "next/image";
 
 const metrics = [
 	{
@@ -76,8 +77,15 @@ function AboutUs() {
 							</p>
 						</div>
 
-						<div className="min-h-56 border border-dashed border-border bg-surface-muted">
-							image
+						<div className="overflow-hidden ">
+							<Image
+								src="/assets/img1.png"
+								alt="Benfexal Infotech team collaborating on an Odoo ERP implementation"
+								width={640}
+								height={510}
+								sizes="(min-width: 1280px) 18rem, 100vw"
+								className="h-auto w-full"
+							/>
 						</div>
 					</div>
 				</div>

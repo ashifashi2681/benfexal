@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
 import Steps from "../ui/Steps";
+import Image from "next/image";
 
 const stages = [
 	{
@@ -141,10 +142,16 @@ function ERPTransformationProcess() {
 			</div>
 
 			<div
-				className="mt-10 h-24 border border-dashed border-border bg-surface-muted sm:h-28"
-				aria-hidden="true">
+				className="mt-10 border border-dashed border-border bg-surface-muted rounded-md overflow-hidden shadow-xl">
 				{/* img required — premium abstract visual: fragmented workflows → connected Odoo ERP → optimized operations */}
-				image
+				<Image
+					src="/assets/img3.png"
+					alt="ERP transformation journey from fragmented workflows through connected Odoo ERP to optimized operations"
+					width={1792}
+					height={592}
+					sizes="(max-width: 1280px) calc(100vw - 2rem), 1216px"
+					className="block h-auto w-full"
+				/>
 			</div>
 
 			{/* Mobile: vertical timeline */}

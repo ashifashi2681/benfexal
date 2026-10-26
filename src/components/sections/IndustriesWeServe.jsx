@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
 import { HiArrowLongRight } from "react-icons/hi2";
+import Image from "next/image";
 
 const industries = [
 	{
@@ -17,6 +18,7 @@ const industries = [
 			"Procurement workflows",
 			"Operational management",
 		],
+		img: "/assets/test.webp",
 	},
 	{
 		number: "02",
@@ -29,6 +31,7 @@ const industries = [
 			"Warehousing",
 			"Order fulfillment",
 		],
+		img: "/assets/test.webp",
 	},
 	{
 		number: "03",
@@ -41,6 +44,7 @@ const industries = [
 			"Customer engagement",
 			"Retail analytics",
 		],
+		img: "/assets/test.webp",
 	},
 	{
 		number: "04",
@@ -53,6 +57,7 @@ const industries = [
 			"Sales orders",
 			"Production planning",
 		],
+		img: "/assets/test.webp",
 	},
 	{
 		number: "05",
@@ -65,6 +70,7 @@ const industries = [
 			"Budgeting",
 			"Financial control",
 		],
+		img: "/assets/test.webp",
 	},
 	{
 		number: "06",
@@ -77,6 +83,7 @@ const industries = [
 			"Rental returns",
 			"Availability reporting",
 		],
+		img: "/assets/test.webp",
 	},
 	{
 		number: "07",
@@ -89,6 +96,7 @@ const industries = [
 			"Procurement",
 			"Process automation",
 		],
+		img: "/assets/test.webp",
 	},
 	{
 		number: "08",
@@ -101,6 +109,7 @@ const industries = [
 			"Timesheets",
 			"Invoicing and billing",
 		],
+		img: "/assets/test.webp",
 	},
 ];
 
@@ -208,8 +217,14 @@ function IndustriesWeServe() {
 								</p>
 							</div>
 
-							<div className="min-h-44 border border-dashed border-white/25 bg-white/5 text-white">
-								{/* img required */} image
+							<div className="relative min-h-44 overflow-hidden border border-dashed border-white/25 bg-white/5">
+								<Image
+									src={activeIndustry.img}
+									alt={`${activeIndustry.name} industry Odoo ERP solution illustration`}
+									fill
+									sizes="(max-width: 1024px) calc(100vw - 3rem), 208px"
+									className="object-cover p-2"
+								/>
 							</div>
 						</div>
 
