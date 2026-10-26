@@ -29,15 +29,15 @@ const footerNav = [
       { label: "Implementation Philosophy", href: "#implementation-philosophy" },
     ],
   },
-  {
-    title: "Resources",
-    links: [
-      { label: "Blog", href: "#" },
-      { label: "Case Studies", href: "#" },
-      { label: "FAQ", href: "#" },
-      { label: "Support", href: "#" },
-    ],
-  },
+  // {
+  //   title: "Resources",
+  //   links: [
+  //     { label: "Blog", href: "#" },
+  //     { label: "Case Studies", href: "#" },
+  //     { label: "FAQ", href: "#" },
+  //     { label: "Support", href: "#" },
+  //   ],
+  // },
 ];
 
 const socialLinks = [
