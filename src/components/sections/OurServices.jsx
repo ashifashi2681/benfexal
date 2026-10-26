@@ -118,9 +118,10 @@ function ServiceIcon({ type }) {
 	);
 }
 
-function OurServices() {
+function OurServices({id}) {
 	return (
 		<Container
+		id={id}
 			className="stack-wrapper overflow-hidden border-y border-border-light bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div

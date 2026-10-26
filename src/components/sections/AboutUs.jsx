@@ -21,9 +21,10 @@ const metrics = [
 
 const processSteps = ["Business First", "Process", "Technology", "Growth"];
 
-function AboutUs() {
+function AboutUs({ id }) {
 	return (
 		<Container
+			id={id}
 			className="stack-wrapper overflow-hidden border-y border-border-light bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_24rem] lg:gap-16">
@@ -119,7 +120,6 @@ function AboutUs() {
 			<div className="mt-16 flex justify-center">
 				<Steps arr={processSteps} />
 			</div>
-		
 		</Container>
 	);
 }

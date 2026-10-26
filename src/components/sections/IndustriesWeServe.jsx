@@ -113,11 +113,12 @@ const industries = [
 	},
 ];
 
-function IndustriesWeServe() {
+function IndustriesWeServe({id}) {
 	const [activeIndustry, setActiveIndustry] = useState(industries[0]);
 
 	return (
 		<Container
+		id={id}
 			className="stack-wrapper overflow-hidden border-y border-border-light bg-background bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-end lg:gap-16">

@@ -1,6 +1,7 @@
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
 import Card from "../ui/Card";
+import Image from "next/image";
 
 const proofPoints = [
 	{
@@ -60,7 +61,7 @@ const ecosystemNodes = [
 	"CRM",
 ];
 
-function WhyBenfexal() {
+function WhyBenfexal({ id }) {
 	// const sectionRef = useRef(null);
 	// const [isVisible, setIsVisible] = useState(false);
 
@@ -85,6 +86,7 @@ function WhyBenfexal() {
 	const isVisible = true;
 	return (
 		<Container
+			id={id}
 			// ref={sectionRef}
 			className="stack-wrapper overflow-hidden border-y border-border-light bg-surface-elevated bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
@@ -146,11 +148,16 @@ function WhyBenfexal() {
 							ODOO
 						</h3>
 
-						<div
-							className="mt-6 h-20 border border-dashed border-border bg-surface-muted"
-							aria-hidden="true">
+						<div className="mt-6 border border-dashed border-border bg-surface-muted rounded-md shadow-xl overflow-hidden">
 							{/* img required — premium abstract ERP ecosystem visual: interconnected business functions (finance, sales, inventory, manufacturing, HR, CRM) */}
-							image
+							<Image
+								src="/assets/img4.png"
+								alt="Odoo ERP ecosystem connecting finance, sales, inventory, manufacturing, human resources, and customer relationship management"
+								width={400}
+								height={160}
+								sizes="(max-width: 640px) calc(100vw - 4rem), 384px"
+								className="block h-auto w-full"
+							/>
 						</div>
 
 						<div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3">

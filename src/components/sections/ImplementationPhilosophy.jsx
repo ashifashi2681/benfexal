@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
@@ -41,7 +40,7 @@ const values = [
 	},
 ];
 
-function ImplementationPhilosophy() {
+function ImplementationPhilosophy({ id }) {
 	// const spectrumRef = useRef(null);
 	// const [isVisible, setIsVisible] = useState(false);
 
@@ -66,6 +65,7 @@ function ImplementationPhilosophy() {
 	const isVisible = true;
 	return (
 		<Container
+			id={id}
 			spacing="lg"
 			className="stack-wrapper overflow-hidden border-y border-border-light bg-background-muted bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
@@ -203,8 +203,7 @@ function ImplementationPhilosophy() {
 				</p>
 			</div>
 
-			<div
-				className="mx-auto mt-24 max-w-5xl sm:mt-28 rounded-md overflow-hidden shadow">
+			<div className="mx-auto mt-24 max-w-5xl sm:mt-28 rounded-md overflow-hidden shadow">
 				<div className="border border-dashed border-border bg-surface-muted">
 					{/* img required — ERP architecture blueprint: standard Odoo foundation transitioning into a few highlighted custom components */}
 					<Image

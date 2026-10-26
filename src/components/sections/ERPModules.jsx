@@ -72,9 +72,10 @@ const modules = [
 
 const flow = ["Sales", "Finance", "Operations", "People", "Performance"];
 
-function ERPModules() {
+function ERPModules({id}) {
 	return (
 		<Container
+		id={id}
 			className="stack-wrapper overflow-hidden border-y border-border-light bg-background-muted bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div className="mx-auto max-w-4xl text-center">

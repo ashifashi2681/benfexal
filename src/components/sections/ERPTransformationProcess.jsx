@@ -94,9 +94,10 @@ const directionChevrons = [
 	"M 1047 643 L 1038 650 L 1047 657",
 ];
 
-function ERPTransformationProcess() {
+function ERPTransformationProcess({ id }) {
 	return (
 		<Container
+			id={id}
 			className="stack-wrapper overflow-hidden border-y border-border-light bg-background bg-[url(/background/sectionBgB.jpg)] bg-cover bg-center"
 			contentClassName="relative">
 			<div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_26rem] lg:gap-16">
@@ -141,8 +142,7 @@ function ERPTransformationProcess() {
 				</div>
 			</div>
 
-			<div
-				className="mt-10 border border-dashed border-border bg-surface-muted rounded-md overflow-hidden shadow-xl">
+			<div className="mt-10 border border-dashed border-border bg-surface-muted rounded-md overflow-hidden shadow-xl">
 				{/* img required — premium abstract visual: fragmented workflows → connected Odoo ERP → optimized operations */}
 				<Image
 					src="/assets/img3.png"

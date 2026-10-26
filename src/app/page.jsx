@@ -49,14 +49,14 @@ export default function Home() {
 				}}
 			/>
 			<Hero />
-			<AboutUs />
-			<OurServices />
-			<WhyBenfexal />
-			<IndustriesWeServe />
-			<ERPModules />
-			<ERPTransformationProcess />
-			<ImplementationPhilosophy />
-			<Contact />
+			<AboutUs id={"about-us"} />
+			<OurServices id={"our-services"} />
+			<WhyBenfexal id={"why-benfexal"} />
+			<IndustriesWeServe id={"industries-we-serve"} />
+			<ERPModules id={"erp-modules"} />
+			<ERPTransformationProcess id={"erp-transformation-process"} />
+			<ImplementationPhilosophy id={"coimplementation-philosophyntact"} />
+			<Contact id={"contact"} />
 			<StackScroll />
 		</>
 	);

@@ -46,13 +46,13 @@ const contactChannels = [
 ];
 
 
-function Contact() {
+function Contact({id}) {
 	
 
 	return (
 		<Container
 			as="section"
-			id="contact"
+			id={id}
 			spacing="lg"
 			aria-labelledby="contact-title"
 			className="stack-wrapper relative overflow-hidden bg-foreground"
@@ -157,10 +157,10 @@ function Contact() {
 			<div className="relative mt-20 grid gap-12 lg:grid-cols-12 lg:gap-16">
 				<div className="flex flex-col items-start lg:col-span-5">
 					<p
-						className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+						className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/70!">
 						<span
 							aria-hidden="true"
-							className="h-1.5 w-1.5 rounded-full bg-brand-gold"
+							className="h-1.5 w-1.5 rounded-full bg-brand-gold!"
 						/>
 						GET IN TOUCH
 					</p>
@@ -174,7 +174,7 @@ function Contact() {
 					</h3>
 
 					<p
-						className="mt-5 max-w-md text-base leading-relaxed text-white/60">
+						className="mt-5 max-w-md text-base leading-relaxed text-white/60!">
 						Connect with our ERP consultants to explore the right
 						Odoo solutions for your business.
 					</p>
@@ -182,14 +182,14 @@ function Contact() {
 					{/* Office + service regions */}
 					<div className="mt-10 grid w-full gap-8 sm:grid-cols-2">
 						<div>
-							<p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/50">
+							<p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/50!">
 								<HiOutlineMapPin
 									aria-hidden="true"
 									className="h-4 w-4 text-brand"
 								/>
 								Our Office
 							</p>
-							<address className="mt-3 not-italic text-sm leading-relaxed text-white/70">
+							<address className="mt-3 not-italic text-sm leading-relaxed text-white/70!">
 								3rd Floor, Neospace II Building,
 								<br />
 								Kinfra Techno Industrial Park,
@@ -199,10 +199,10 @@ function Contact() {
 						</div>
 
 						<div>
-							<p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">
+							<p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50!">
 								Our Service Regions
 							</p>
-							<p className="mt-3 text-sm leading-relaxed text-white/70">
+							<p className="mt-3 text-sm leading-relaxed text-white/70!">
 								India • UAE • Saudi Arabia • GCC Region
 							</p>
 						</div>
@@ -236,7 +236,7 @@ function Contact() {
 									</span>
 
 									<span className="min-w-0">
-										<span className="block text-xs font-semibold uppercase tracking-[0.18em] text-white/50">
+										<span className="block text-xs font-semibold uppercase tracking-[0.18em] text-white/50!">
 											{channel.label}
 										</span>
 										<span className="relative mt-1 block truncate text-lg font-semibold text-white after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-brand after:transition-transform after:duration-500 group-hover:after:scale-x-100">
@@ -253,7 +253,7 @@ function Contact() {
 						})}
 					</div>
 
-					<p className="mt-6 text-sm leading-relaxed text-white/50">
+					<p className="mt-6 text-sm leading-relaxed text-white/50!">
 						Prefer a quick conversation? WhatsApp and email are both
 						monitored during business hours.
 					</p>
@@ -263,7 +263,7 @@ function Contact() {
 			{/* Brand strip — final sign-off */}
 			<div
 				className="relative mt-20 border-t border-white/10 pt-10 text-center">
-				<p className="font-mono text-sm font-semibold uppercase tracking-[0.22em] text-white/50">
+				<p className="font-mono text-sm font-semibold uppercase tracking-[0.22em] text-white/50!">
 					Benfexal Infotech
 				</p>
 
@@ -276,10 +276,10 @@ function Contact() {
 					Official Odoo Partner
 				</span>
 
-				<p className="mx-auto mt-5 max-w-xl text-lg italic text-white/80">
+				<p className="mx-auto mt-5 max-w-xl text-lg italic text-white/80!">
 					Empowering Businesses Through Intelligent ERP Solutions.
 				</p>
-				<p className="mx-auto mt-2 max-w-xl font-mono text-sm text-brand-gold">
+				<p className="mx-auto mt-2 max-w-xl font-mono text-sm text-brand-gold!">
 					Your Business. Our ERP Expertise. One Smarter Future.
 				</p>
 			</div>
