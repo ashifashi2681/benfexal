@@ -65,7 +65,6 @@ function Contact({id}) {
 				<div className="absolute -bottom-32 right-0 h-80 w-80 rounded-full bg-brand-gold/10 blur-[110px]" />
 			</div>
 
-		
 			<div
 				aria-hidden="true"
 				className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(rgba(255,255,255,0.07)_1px,transparent_1px)] bg-size-[28px_28px] mask-[radial-gradient(ellipse_at_top_right,black_20%,transparent_70%)]"
@@ -73,8 +72,7 @@ function Contact({id}) {
 
 			{/* Upper portion — conversion message */}
 			<div className="relative flex flex-col items-start">
-				<p
-					className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/70!">
+				<p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/70!">
 					<span
 						aria-hidden="true"
 						className="h-1.5 w-1.5 rounded-full bg-brand"
@@ -122,9 +120,7 @@ function Contact({id}) {
 					</p>
 				</div>
 
-				<div
-				
-					className="mt-10 flex flex-wrap items-center gap-5">
+				<div className="mt-10 flex flex-wrap items-center gap-5">
 					<Button
 						as="a"
 						variant="primary"
@@ -156,8 +152,7 @@ function Contact({id}) {
 			{/* Lower portion — contact information & office details */}
 			<div className="relative mt-20 grid gap-12 lg:grid-cols-12 lg:gap-16">
 				<div className="flex flex-col items-start lg:col-span-5">
-					<p
-						className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/70!">
+					<p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/70!">
 						<span
 							aria-hidden="true"
 							className="h-1.5 w-1.5 rounded-full bg-brand-gold!"
@@ -165,16 +160,14 @@ function Contact({id}) {
 						GET IN TOUCH
 					</p>
 
-					<h3
-						className="mt-5 text-xl font-semibold leading-tight tracking-tight text-white! sm:text-xxl">
+					<h3 className="mt-5 text-xl font-semibold leading-tight tracking-tight text-white! sm:text-xxl">
 						Let&apos;s Build Something{" "}
 						<span className="font-mono italic text-brand-gold">
 							Better Together.
 						</span>
 					</h3>
 
-					<p
-						className="mt-5 max-w-md text-base leading-relaxed text-white/60!">
+					<p className="mt-5 max-w-md text-base leading-relaxed text-white/60!">
 						Connect with our ERP consultants to explore the right
 						Odoo solutions for your business.
 					</p>
@@ -190,11 +183,11 @@ function Contact({id}) {
 								Our Office
 							</p>
 							<address className="mt-3 not-italic text-sm leading-relaxed text-white/70!">
-								3rd Floor, Neospace II Building,
+								3rd Floor, SDF Building,
 								<br />
 								Kinfra Techno Industrial Park,
 								<br />
-								Malappuram, Kerala, India – 673635
+								University PO, Kakkanchery, Keralam 673634
 							</address>
 						</div>
 
@@ -210,9 +203,7 @@ function Contact({id}) {
 				</div>
 
 				{/* Contact channels — full-width rows, easy to tap on mobile */}
-				<div
-					
-					className="lg:col-span-7">
+				<div className="lg:col-span-7">
 					<div className="divide-y divide-white/10 border-y border-white/10">
 						{contactChannels.map((channel, index) => {
 							const Icon = channel.icon;
@@ -261,8 +252,7 @@ function Contact({id}) {
 			</div>
 
 			{/* Brand strip — final sign-off */}
-			<div
-				className="relative mt-20 border-t border-white/10 pt-10 text-center">
+			<div className="relative mt-20 border-t border-white/10 pt-10 text-center">
 				<p className="font-mono text-sm font-semibold uppercase tracking-[0.22em] text-white/50!">
 					Benfexal Infotech
 				</p>

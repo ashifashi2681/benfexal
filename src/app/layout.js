@@ -81,8 +81,8 @@ export default function RootLayout({ children }) {
 	return (
 		<html
 			lang="en"
-			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-			<body className="min-h-full flex flex-col">
+			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased `}>
+			<body className="min-h-full flex flex-col bg-blue-100!">
 				<Header />
 				{children}
 				<Footer />
@@ -92,13 +92,3 @@ export default function RootLayout({ children }) {
 	);
 }
 
-/* 
-refer my current theme, global.css, components. complete this selected section. use tailwind not css module for this section. if any images required for this secion, keep it blank and comment there 'img required'. i'll add it later.
-content:-
-*/
-
-/*
-Page: Home landing page. section: 2. -- full seo friendly content only for "ABOUT US ". keep this section ui style differ from previous section idea. if this section type usually use images in other likable website, use the image ideas in this section. don't generate images in this chat session. while generating content, structure the content based on 'what premium modern section look like.'
-title with highlighted word, eyebrow etc. 
-content:-
-*/
