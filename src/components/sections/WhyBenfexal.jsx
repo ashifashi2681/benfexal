@@ -46,7 +46,7 @@ const proofPoints = [
 		description:
 			"Our relationship continues beyond implementation. Dedicated Odoo support and Annual Maintenance Contract (AMC) services help maintain system performance, resolve issues, implement enhancements, and support continuous improvement.",
 		position:
-			"lg:-bottom-56 lg:left-1/2 lg:max-w-[21rem] lg:-translate-x-1/2 lg:text-center",
+			"lg:-bottom-74 lg:left-1/2 lg:max-w-[21rem] lg:-translate-x-1/2 lg:text-center",
 		line: "lg:bottom-full lg:left-1/2 lg:h-20 lg:w-px lg:-translate-x-1/2",
 		vertical: true,
 	},
@@ -62,27 +62,7 @@ const ecosystemNodes = [
 ];
 
 function WhyBenfexal({ id }) {
-	// const sectionRef = useRef(null);
-	// const [isVisible, setIsVisible] = useState(false);
 
-	// useEffect(() => {
-	// 	const section = sectionRef.current;
-	// 	if (!section) return;
-
-	// 	const observer = new IntersectionObserver(
-	// 		([entry]) => {
-	// 			if (entry.isIntersecting) {
-	// 				setIsVisible(true);
-	// 				observer.unobserve(entry.target);
-	// 			}
-	// 		},
-	// 		{ threshold: 0.22 }
-	// 	);
-
-	// 	observer.observe(section);
-
-	// 	return () => observer.disconnect();
-	// }, []);
 	const isVisible = true;
 	return (
 		<Container
@@ -151,7 +131,7 @@ function WhyBenfexal({ id }) {
 						<div className="mt-6 border border-dashed border-border bg-surface-muted rounded-md shadow-xl overflow-hidden">
 							{/* img required — premium abstract ERP ecosystem visual: interconnected business functions (finance, sales, inventory, manufacturing, HR, CRM) */}
 							<Image
-								src="/assets/img4.png"
+								src="/stock/img3.webp"
 								alt="Odoo ERP ecosystem connecting finance, sales, inventory, manufacturing, human resources, and customer relationship management"
 								width={400}
 								height={160}
@@ -221,7 +201,7 @@ function WhyBenfexal({ id }) {
 				</div>
 			</div>
 
-			<div className="mt-66 border border-border bg-foreground px-5 py-5 text-center sm:px-8">
+			<div className="mt-6 lg:mt-76 border border-border bg-foreground px-5 py-5 text-center sm:px-8">
 				<p className="text-lg font-semibold text-white">
 					Expertise. Alignment. Scalability. Support.
 				</p>

@@ -3,6 +3,8 @@ import Container from "../ui/Container";
 import Button from "../ui/Button";
 import { HiMiniStar } from "react-icons/hi2";
 import Image from "next/image";
+import { MdSettingsSystemDaydream } from "react-icons/md";
+import { GrSystem } from "react-icons/gr";
 
 function Hero() {
 	return (
@@ -44,9 +46,33 @@ function Hero() {
 						<div className="flex items-center gap-3">
 							{/* Avatars */}
 							<div className="flex -space-x-3">
-								<span className="h-11 w-11 rounded-full border-2 border-background bg-surface-elevated" />
-								<span className="h-11 w-11 rounded-full border-2 border-background bg-surface-elevated" />
-								<span className="h-11 w-11 rounded-full border-2 border-background bg-surface-elevated" />
+								<span className="h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-background">
+									<Image
+										src="/stock/user1.png"
+										alt="Benfexal client"
+										width={44}
+										height={44}
+										className="h-full w-full object-cover"
+									/>
+								</span>
+								<span className="h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-background">
+									<Image
+										src="/stock/user2.png"
+										alt="Benfexal client"
+										width={44}
+										height={44}
+										className="h-full w-full object-cover"
+									/>
+								</span>
+								<span className="h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-background">
+									<Image
+										src="/stock/user3.png"
+										alt="Benfexal client"
+										width={44}
+										height={44}
+										className="h-full w-full object-cover"
+									/>
+								</span>
 							</div>
 
 							<div className="text-sm leading-snug">
@@ -93,7 +119,7 @@ function Hero() {
 					<div className="grid grid-cols-12 gap-4 sm:gap-5">
 						<div className="relative col-span-7 h-52 overflow-hidden rounded-3xl bg-background-subtle sm:h-64 lg:h-72">
 							<Image
-								src="https://img.magnific.com/free-vector/hand-drawn-flat-design-erp-illustration_23-2149383351.jpg?semt=ais_hybrid&w=740&q=80"
+								src={"/stock/img1.webp"}
 								alt="Illustration of ERP dashboards connecting finance, operations, inventory, and team workflows"
 								fill
 								priority
@@ -103,8 +129,8 @@ function Hero() {
 						</div>
 
 						<div className="col-span-5 flex h-52 flex-col items-center justify-center gap-3 rounded-3xl bg-brand-gold-light px-6 py-8 text-center sm:h-64 lg:h-72">
-							<span className="flex h-12 w-12 items-center justify-center rounded-full bg-surface shadow-card">
-								{/* Icon */}
+							<span className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-surface shadow-card text-xl">
+								<MdSettingsSystemDaydream />
 							</span>
 							<p className="text-lg font-semibold text-foreground">
 								40+ ERP experts.
@@ -118,8 +144,8 @@ function Hero() {
 					{/* Row 2 */}
 					<div className="grid grid-cols-12 gap-4 sm:gap-5">
 						<div className="col-span-5 flex h-44 flex-col items-center justify-between rounded-full bg-foreground px-6 py-7 text-center sm:h-56 lg:h-64">
-							<span className="flex h-10 w-10 items-center justify-center rounded-full bg-surface">
-								{/* Icon */}
+							<span className="flex h-10 w-10 items-center justify-center rounded-full bg-surface text-base">
+								<GrSystem />
 							</span>
 
 							<div>
@@ -131,13 +157,29 @@ function Hero() {
 								</p>
 							</div>
 
-							<span className="h-11 w-11 rounded-full bg-white/20 ring-2 ring-white/30">
-								{/* Avatar */}
+							<span className="h-11 w-11 shrink-0 overflow-hidden rounded-full bg-white/20 ring-2 ring-white/30">
+								<Image
+									src="/stock/flat.png"
+									alt="Benfexal ERP consultant"
+									width={44}
+									height={44}
+									className="h-full w-full object-cover"
+								/>
 							</span>
 						</div>
 
 						<div className="col-span-7 h-44 overflow-hidden rounded-3xl bg-background-subtle sm:h-56 lg:h-64">
 							{/* Image */}
+							<div className="relative col-span-7 h-52 overflow-hidden rounded-3xl bg-background-subtle sm:h-64 lg:h-72">
+								<Image
+									src={"/stock/img2.webp"}
+									alt="Illustration of ERP dashboards connecting finance, operations, inventory, and team workflows"
+									fill
+									priority
+									sizes="(min-width: 1024px) 37rem, (min-width: 640px) 58vw, 58vw"
+									className="object-cover"
+								/>
+							</div>
 						</div>
 					</div>
 				</div>

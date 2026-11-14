@@ -145,12 +145,12 @@ function ERPTransformationProcess({ id }) {
 			<div className="mt-10 border border-dashed border-border bg-surface-muted rounded-md overflow-hidden shadow-xl">
 				{/* img required — premium abstract visual: fragmented workflows → connected Odoo ERP → optimized operations */}
 				<Image
-					src="/assets/img3.png"
+					src="/stock/img4.webp"
 					alt="ERP transformation journey from fragmented workflows through connected Odoo ERP to optimized operations"
-					width={1792}
-					height={592}
+					width={1640}
+					height={856}
 					sizes="(max-width: 1280px) calc(100vw - 2rem), 1216px"
-					className="block h-auto w-full"
+					className="block h-102 w-full object-cover object-center"
 				/>
 			</div>
 
@@ -185,7 +185,7 @@ function ERPTransformationProcess({ id }) {
 			</ol>
 
 			{/* Desktop: ERP transformation journey along a serpentine path */}
-			<div className="relative mt-14 hidden lg:block lg:aspect-1440/950 lg:min-h-216 xl:min-h-208">
+			<div className="relative mt-0 hidden lg:block lg:aspect-1440/950 lg:min-h-216 xl:min-h-208">
 				<div
 					className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(180deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-size-[56px_56px] "
 					aria-hidden="true"

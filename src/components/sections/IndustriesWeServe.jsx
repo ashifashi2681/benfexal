@@ -18,7 +18,7 @@ const industries = [
 			"Procurement workflows",
 			"Operational management",
 		],
-		img: "/assets/test.webp",
+		img: "/stock/ind1.webp",
 	},
 	{
 		number: "02",
@@ -31,7 +31,7 @@ const industries = [
 			"Warehousing",
 			"Order fulfillment",
 		],
-		img: "/assets/test.webp",
+		img: "/stock/ind2.webp",
 	},
 	{
 		number: "03",
@@ -44,7 +44,7 @@ const industries = [
 			"Customer engagement",
 			"Retail analytics",
 		],
-		img: "/assets/test.webp",
+		img: "/stock/ind3.webp",
 	},
 	{
 		number: "04",
@@ -57,7 +57,7 @@ const industries = [
 			"Sales orders",
 			"Production planning",
 		],
-		img: "/assets/test.webp",
+		img: "/stock/ind4.webp",
 	},
 	{
 		number: "05",
@@ -70,7 +70,7 @@ const industries = [
 			"Budgeting",
 			"Financial control",
 		],
-		img: "/assets/test.webp",
+		img: "/stock/ind5.webp",
 	},
 	{
 		number: "06",
@@ -83,7 +83,7 @@ const industries = [
 			"Rental returns",
 			"Availability reporting",
 		],
-		img: "/assets/test.webp",
+		img: "/stock/ind6.webp",
 	},
 	{
 		number: "07",
@@ -96,7 +96,7 @@ const industries = [
 			"Procurement",
 			"Process automation",
 		],
-		img: "/assets/test.webp",
+		img: "/stock/ind7.webp",
 	},
 	{
 		number: "08",
@@ -109,7 +109,7 @@ const industries = [
 			"Timesheets",
 			"Invoicing and billing",
 		],
-		img: "/assets/test.webp",
+		img: "/stock/ind8.webp",
 	},
 ];
 

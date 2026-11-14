@@ -41,27 +41,7 @@ const values = [
 ];
 
 function ImplementationPhilosophy({ id }) {
-	// const spectrumRef = useRef(null);
-	// const [isVisible, setIsVisible] = useState(false);
-
-	// useEffect(() => {
-	// 	const node = spectrumRef.current;
-	// 	if (!node) return;
-
-	// 	const observer = new IntersectionObserver(
-	// 		([entry]) => {
-	// 			if (entry.isIntersecting) {
-	// 				setIsVisible(true);
-	// 				observer.unobserve(entry.target);
-	// 			}
-	// 		},
-	// 		{ threshold: 0.3 }
-	// 	);
-
-	// 	observer.observe(node);
-
-	// 	return () => observer.disconnect();
-	// }, []);
+	
 	const isVisible = true;
 	return (
 		<Container
@@ -207,7 +187,7 @@ function ImplementationPhilosophy({ id }) {
 				<div className="border border-dashed border-border bg-surface-muted">
 					{/* img required — ERP architecture blueprint: standard Odoo foundation transitioning into a few highlighted custom components */}
 					<Image
-						src="/assets/img.png"
+						src="/stock/img5.webp"
 						alt="Odoo ERP architecture showing a standard foundation with purposeful custom components"
 						width={750}
 						height={200}
