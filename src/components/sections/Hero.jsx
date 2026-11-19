@@ -11,13 +11,15 @@ function Hero() {
 		<Container
 			as="main"
 			spacing="lg"
-			className="bg-[url(/background/heroBG.png)] bg-cover bg-center stack-wrapper"
+			className="bg-[url(/background/herobg-mob.png)] md:bg-[url(/background/herobg-tab.png)] lg:bg-[url(/background/herobg-desk.png)] bg-cover bg-center stack-wrapper pt-40!"
 			contentClassName=""
 			aria-labelledby="hero-title">
 			<div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 				{/* Copy */}
 				<div className="flex flex-col items-start gap-6">
-					<p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand">
+					<div className="absolute inset-0 bg-linear-to-r from-slate-950/90 via-slate-950/60 to-transparent -z-10" />
+
+					<p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-background-muted/70!">
 						<span
 							aria-hidden="true"
 							className="h-1.5 w-1.5 rounded-full bg-brand"
@@ -27,12 +29,12 @@ function Hero() {
 
 					<h1
 						id="hero-title"
-						className="text-xxxl font-semibold leading-[1.08] tracking-tight">
+						className="text-xxxl font-semibold leading-[1.08] tracking-tight text-background-subtle!">
 						Transforming Business Operations Through{" "}
 						<span className="font-mono italic">Smarter ERP</span>
 					</h1>
 
-					<p className="max-w-xl text-base leading-relaxed">
+					<p className="max-w-xl text-base leading-relaxed text-white/80!">
 						We help businesses streamline operations, automate
 						workflows, and gain real-time visibility with tailored
 						Odoo ERP solutions.
@@ -43,8 +45,7 @@ function Hero() {
 							Get demo account
 						</Button>
 
-						<div className="flex items-center gap-3">
-							{/* Avatars */}
+						{/* <div className="flex items-center gap-3">
 							<div className="flex -space-x-3">
 								<span className="h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-background">
 									<Image
@@ -77,7 +78,6 @@ function Hero() {
 
 							<div className="text-sm leading-snug">
 								<div className="flex items-center gap-2">
-									{/* Stars */}
 									<span
 										className="flex items-center gap-1"
 										aria-hidden="true">
@@ -109,14 +109,14 @@ function Hero() {
 									</span>
 								</p>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 
 				{/* Collage */}
 				<div className="grid gap-4 sm:gap-5">
 					{/* Row 1 */}
-					<div className="grid grid-cols-12 gap-4 sm:gap-5">
+					{/* <div className="grid grid-cols-12 gap-4 sm:gap-5">
 						<div className="relative col-span-7 h-52 overflow-hidden rounded-3xl bg-background-subtle sm:h-64 lg:h-72">
 							<Image
 								src={"/stock/img1.webp"}
@@ -139,10 +139,10 @@ function Hero() {
 								India & GCC.
 							</p>
 						</div>
-					</div>
+					</div> */}
 
 					{/* Row 2 */}
-					<div className="grid grid-cols-12 gap-4 sm:gap-5">
+					{/* <div className="grid grid-cols-12 gap-4 sm:gap-5">
 						<div className="col-span-5 flex h-44 flex-col items-center justify-between rounded-full bg-foreground px-6 py-7 text-center sm:h-56 lg:h-64">
 							<span className="flex h-10 w-10 items-center justify-center rounded-full bg-surface text-base">
 								<GrSystem />
@@ -169,7 +169,6 @@ function Hero() {
 						</div>
 
 						<div className="col-span-7 h-44 overflow-hidden rounded-3xl bg-background-subtle sm:h-56 lg:h-64">
-							{/* Image */}
 							<div className="relative col-span-7 h-52 overflow-hidden rounded-3xl bg-background-subtle sm:h-64 lg:h-72">
 								<Image
 									src={"/stock/img2.webp"}
@@ -181,7 +180,7 @@ function Hero() {
 								/>
 							</div>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</Container>

@@ -18,7 +18,7 @@ function Brand() {
 			aria-label="Benfexal Infotech home"
 			className="inline-flex rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
 			<Image
-				src="/assets/brand_bk.png"
+				src="/assets/brand.png"
 				alt="Benfexal Infotech"
 				width={154}
 				height={44}
@@ -31,23 +31,23 @@ function Brand() {
 
 function Header() {
 	return (
-		<header className="sticky top-0 z-50 border-b border-border-light/80 bg-transparent backdrop-blur-sm">
+		<header className="fixed top-0 left-0 w-full z-50 border-b border-border-light/80 bg-transparent backdrop-blur-sm">
 			<Container
 				as="div"
 				spacing="none"
-				contentClassName="flex h-[var(--header-height)] items-center justify-between ">
+				contentClassName=" flex h-[var(--header-height)] items-center justify-between ">
 				<Brand />
 
 				<nav
 					aria-label="Primary navigation"
 					className="hidden items-center gap-1 lg:flex">
 					{navigation.map((item) => (
-						<a
+						<Link
 							key={item.href}
 							href={item.href}
-							className="rounded-full px-4 py-2 text-sm font-medium text-foreground-secondary transition-colors duration-200 hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+							className="rounded-full px-4 py-2 text-sm font-medium text-background! transition-colors duration-200 hover:text-brand! focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand!">
 							{item.label}
-						</a>
+						</Link>
 					))}
 				</nav>
 
