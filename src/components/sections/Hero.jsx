@@ -11,7 +11,7 @@ function Hero() {
 		<Container
 			as="main"
 			spacing="lg"
-			className="bg-[url(/background/herobg-mob.png)] md:bg-[url(/background/herobg-tab.png)] lg:bg-[url(/background/herobg-desk.png)] bg-cover bg-center stack-wrapper pt-40!"
+			className="bg-[url(/background/herobg-mob1.webp)] md:bg-[url(/background/herobg-tab1.webp)] lg:bg-[url(/background/herobg-desk1.webp)] bg-cover bg-center stack-wrapper pt-40!"
 			contentClassName=""
 			aria-labelledby="hero-title">
 			<div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
