@@ -68,7 +68,10 @@
 
 	--shadow-button: 0 15px 30px rgb(0 0 0 / 0.3);
 }
-
+@theme inline {
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+}
 /* Base Styles*/
 
 :root {
@@ -84,7 +87,7 @@ body {
 	margin: 0;
 	background: var(--color-background);
 	color: var(--color-foreground);
-	font-family: Arial, Helvetica, sans-serif;
+	/* font-family: Arial, Helvetica, sans-serif; */
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }

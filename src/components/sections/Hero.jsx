@@ -11,12 +11,12 @@ function Hero() {
 		<Container
 			as="main"
 			spacing="lg"
-			className="bg-[url(/background/herobg-mob1.webp)] md:bg-[url(/background/herobg-tab1.webp)] lg:bg-[url(/background/herobg-desk1.webp)] bg-cover bg-center stack-wrapper pt-40!"
-			contentClassName=""
+			className="bg-[url(/background/herobg-mob1.webp)] md:bg-[url(/background/herobg-tab1.webp)] lg:bg-[url(/background/herobg-desk1.webp)] bg-cover bg-center stack-wrapper pt-40! h-full flex flex-col items-center justify-center "
+			contentClassName="h-full"
 			aria-labelledby="hero-title">
-			<div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+			<div className="">
 				{/* Copy */}
-				<div className="flex flex-col items-start gap-6">
+				<div className="flex flex-col items-center md:items-start text-center md:text-left gap-6">
 					<div className="absolute inset-0 bg-linear-to-r from-slate-950/90 via-slate-950/60 to-transparent -z-10" />
 
 					<p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-background-muted/70!">
@@ -29,9 +29,9 @@ function Hero() {
 
 					<h1
 						id="hero-title"
-						className="text-xxxl font-semibold leading-[1.08] tracking-tight text-background-subtle!">
+						className="text-xxxl font-bold leading-[1.08] tracking-tight text-background-subtle!">
 						Transforming Business Operations Through{" "}
-						<span className="font-mono italic">Smarter ERP</span>
+						<span className="font-serif">Smarter ERP</span>
 					</h1>
 
 					<p className="max-w-xl text-base leading-relaxed text-white/80!">
@@ -111,76 +111,6 @@ function Hero() {
 							</div>
 						</div> */}
 					</div>
-				</div>
-
-				{/* Collage */}
-				<div className="grid gap-4 sm:gap-5">
-					{/* Row 1 */}
-					{/* <div className="grid grid-cols-12 gap-4 sm:gap-5">
-						<div className="relative col-span-7 h-52 overflow-hidden rounded-3xl bg-background-subtle sm:h-64 lg:h-72">
-							<Image
-								src={"/stock/img1.webp"}
-								alt="Illustration of ERP dashboards connecting finance, operations, inventory, and team workflows"
-								fill
-								priority
-								sizes="(min-width: 1024px) 37rem, (min-width: 640px) 58vw, 58vw"
-								className="object-cover"
-							/>
-						</div>
-
-						<div className="col-span-5 flex h-52 flex-col items-center justify-center gap-3 rounded-3xl bg-brand-gold-light px-6 py-8 text-center sm:h-64 lg:h-72">
-							<span className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-surface shadow-card text-xl">
-								<MdSettingsSystemDaydream />
-							</span>
-							<p className="text-lg font-semibold text-foreground">
-								40+ ERP experts.
-							</p>
-							<p className="text-sm text-foreground-subtle">
-								India & GCC.
-							</p>
-						</div>
-					</div> */}
-
-					{/* Row 2 */}
-					{/* <div className="grid grid-cols-12 gap-4 sm:gap-5">
-						<div className="col-span-5 flex h-44 flex-col items-center justify-between rounded-full bg-foreground px-6 py-7 text-center sm:h-56 lg:h-64">
-							<span className="flex h-10 w-10 items-center justify-center rounded-full bg-surface text-base">
-								<GrSystem />
-							</span>
-
-							<div>
-								<p className="text-2xl font-semibold italic text-white">
-									India + GCC
-								</p>
-								<p className="mt-1 text-sm text-white/70">
-									ERP Expertise
-								</p>
-							</div>
-
-							<span className="h-11 w-11 shrink-0 overflow-hidden rounded-full bg-white/20 ring-2 ring-white/30">
-								<Image
-									src="/stock/flat.png"
-									alt="Benfexal ERP consultant"
-									width={44}
-									height={44}
-									className="h-full w-full object-cover"
-								/>
-							</span>
-						</div>
-
-						<div className="col-span-7 h-44 overflow-hidden rounded-3xl bg-background-subtle sm:h-56 lg:h-64">
-							<div className="relative col-span-7 h-52 overflow-hidden rounded-3xl bg-background-subtle sm:h-64 lg:h-72">
-								<Image
-									src={"/stock/img2.webp"}
-									alt="Illustration of ERP dashboards connecting finance, operations, inventory, and team workflows"
-									fill
-									priority
-									sizes="(min-width: 1024px) 37rem, (min-width: 640px) 58vw, 58vw"
-									className="object-cover"
-								/>
-							</div>
-						</div>
-					</div> */}
 				</div>
 			</div>
 		</Container>

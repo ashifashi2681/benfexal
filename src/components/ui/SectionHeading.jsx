@@ -44,17 +44,16 @@ function SectionHeading({
       );
 
       return isHighlight ? (
-        <span
-          key={index}
-          className={["font-mono", highlightClassName]
-            .filter(Boolean)
-            .join(" ")}
-        >
-          {part}
-        </span>
-      ) : (
-        part
-      );
+			<span
+				key={index}
+				className={["font-serif", highlightClassName]
+					.filter(Boolean)
+					.join(" ")}>
+				{part}
+			</span>
+		) : (
+			part
+		);
     });
   };
 

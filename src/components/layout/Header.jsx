@@ -31,7 +31,7 @@ function Brand() {
 
 function Header() {
 	return (
-		<header className="fixed top-0 left-0 w-full z-50 border-b border-border-light/80 bg-transparent backdrop-blur-sm">
+		<header className="fixed top-0 left-0 w-full z-50  bg-linear-to-b from-black/75 via-black/30 to-transparent backdrop-blur-sm">
 			<Container
 				as="div"
 				spacing="none"
